@@ -14,6 +14,6 @@ module.exports = {
     appMainContent: "mainContent",
   },
   configuration: {
-    API_URL: "http://localhost:8080/products/",
+    API_URL: "https://walmart-api-sell.herokuapp.com/api/walmart/v1/products/",
   },
 };
