@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Walmart</title>
+</head>
+
+<div id="appMain" class="hyf-mu-content" tabindex="-1" role="main">
+    <noscript>
+      <div>
+        Para una mejor experiencia habilite JavaScript en su navegador
+      </div>
+    </noscript>
+    <div id="mainContent"></div>
+    <script type="text/javascript">
+        (function(global) {
+            global.WALMART = global.WALMART ? global.WALMART : {};
+        })(this);
+
+        WALMART.Environment = <%= JSON.stringify(htmlWebpackPlugin.options.environment) %>;
+        WALMART.Configuration = <%= JSON.stringify(htmlWebpackPlugin.options.configuration) %>;
+    </script>
+</div>
+
+</html>

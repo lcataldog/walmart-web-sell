@@ -1,0 +1,18 @@
+.header-info {
+    color: #fff;
+    background-color: #000915;
+    z-index: 5;
+    height: 30px;
+    width: 100%;
+    display: flex
+}
+
+.header-info span {
+    padding: 0 10px;
+    font-size: 12px
+}
+
+.header-info-expanded {
+    justify-content: space-between;
+    align-items: center
+}
