@@ -4,8 +4,7 @@ import Message from "../Message/Message";
 import SearchResults from "../SearchResults/SearchResults";
 import SearchInput from "../SearchInput/SearchInput";
 import Configuration from "../../Config/configurations";
-import "../../assets/css/main.css";
-import "../../assets/css/wmt.css";
+import Logo from "../Logo/Logo";
 
 class Search extends React.Component {
   constructor(props) {
@@ -43,8 +42,6 @@ class Search extends React.Component {
         headers: { "Access-Control-Allow-Origin": "*" },
       })
       .then((res) => {
-        console.log("LALO");
-
         const resultNotFoundMsg =
           res.data === null || res.data === "" ? "Product not available" : "";
 
@@ -56,7 +53,6 @@ class Search extends React.Component {
         console.log(this.state);
       })
       .catch((error) => {
-        console.log("LALO3");
         if (axios.isCancel(error) || error) {
           this.setState({
             loading: false,
@@ -64,7 +60,6 @@ class Search extends React.Component {
           });
         }
       });
-    console.log("LALO 5");
   };
 
   handleOnInputChange = (event) => {
@@ -98,21 +93,7 @@ class Search extends React.Component {
           style={{ backgroundColor: "rgb(4,30,66)" }}
         >
           <div className="header-wrapper">
-            <div className="logo">
-              <a href="/catalogo">
-                <img
-                  src="/assets/img/cyber-lider-logo.svg"
-                  style={{
-                    width: "152px",
-                    height: "50px",
-                    marginTop: "8px",
-                    marginLeft: "10px",
-                    paddingTop: "6px",
-                    marginBottom: "6px",
-                  }}
-                />
-              </a>
-            </div>
+            <Logo />
             <div style={{ width: "100%", margin: "0px 3%" }}>
               <div className="search-width">
                 <SearchInput
