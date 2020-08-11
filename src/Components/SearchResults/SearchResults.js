@@ -7,7 +7,6 @@ import RetreatButton from "../Buttons/RetreatButton";
 class SearchResults extends React.PureComponent {
   render() {
     const { results } = this.props;
-
     return (
       <div className="ais-Hits">
         <ul className="ais-Hits-list">

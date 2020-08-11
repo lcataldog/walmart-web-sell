@@ -11,7 +11,6 @@ class Provider extends Component {
     const { configuration: data = {} } = props;
     this.state = {
       configuration: {
-        flowid,
         data,
       },
     };
@@ -47,4 +46,4 @@ Provider.defaultProps = {
 const { Consumer } = Context;
 
 export default Provider;
-export { Context, Provider, Consumer, flowid };
+export { Context, Provider, Consumer };

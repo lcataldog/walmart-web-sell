@@ -13,7 +13,6 @@ class Search extends React.Component {
     this.state = {
       query: "",
       results: {},
-      loading: false,
       message: "",
     };
 
@@ -35,7 +34,6 @@ class Search extends React.Component {
     }
 
     this.cancel = axios.CancelToken.source();
-
     axios
       .get(searchUrl, {
         cancelToken: this.cancel.token,
@@ -43,20 +41,18 @@ class Search extends React.Component {
       })
       .then((res) => {
         const resultNotFoundMsg =
-          res.data === null || res.data === "" ? "Product not available" : "";
-
+          res.data === null || res.data === ""
+            ? "Producto No disponible"
+            : "Se encontraron " + res.data.length + " resultado para " + query;
         this.setState({
           results: res.data,
           message: resultNotFoundMsg,
-          loading: false,
         });
-        console.log(this.state);
       })
       .catch((error) => {
         if (axios.isCancel(error) || error) {
           this.setState({
-            loading: false,
-            message: "Failed to fetch the data. Please check network",
+            message: "",
           });
         }
       });
@@ -71,7 +67,7 @@ class Search extends React.Component {
         message: "",
       });
     } else {
-      this.setState({ query, loading: true, message: "" }, () => {
+      this.setState({ query, message: "" }, () => {
         this.fetchSearchResults(query);
       });
     }
@@ -94,7 +90,7 @@ class Search extends React.Component {
         >
           <div className="header-wrapper">
             <Logo />
-            <div style={{ width: "100%", margin: "0px 3%" }}>
+            <div style={{ width: "95%", margin: "0px 3%" }}>
               <div className="search-width">
                 <SearchInput
                   query={query}

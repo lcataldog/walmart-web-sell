@@ -5,6 +5,7 @@
     "dependencies": {
         "@babel/core": "^7.11.1",
         "@babel/preset-react": "^7.10.4",
+        "babel-jest": "^24.1.0",
         "autoprefixer": "^9.7.0",
         "axios": "^0.19.2",
         "babel-loader": "^8.1.0",
@@ -91,7 +92,9 @@
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",
         "docker:build": "docker build -t walmart-web-sell .",
-        "docker:run": "npm run docker:build && docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3001:8080 walmart-web-sell"
+        "docker:run": "npm run docker:build && docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3001:8080 walmart-web-sell",
+        "jest": "cross-env NODE_PATH=./src jest",
+        "test:unit": "npm run jest -- test/unit"
     },
     "browserslist": [
         "last 2 versions",

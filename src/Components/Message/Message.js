@@ -4,7 +4,14 @@ class Message extends React.PureComponent {
   render() {
     return (
       <div>
-        <p className="message">{this.props.message}</p>
+        <span
+          style={{
+            color: "rgb(0, 0, 0)",
+            fontWeight: "bold",
+          }}
+        >
+          {this.props.message}
+        </span>
       </div>
     );
   }
