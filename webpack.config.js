@@ -60,6 +60,12 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    historyApiFallback: true,
+    port: process.env.PORT || 8080,
+    host: "localhost",
+    allowedHosts: [".herokuapp.com", "localhost"],
+  },
   externals: ["window"],
   plugins: [
     new HtmlWebpackPlugin({
