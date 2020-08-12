@@ -1,8 +1,7 @@
 import React from "react";
 import "jsdom-global/register";
-import { shallow, mount } from "enzyme";
+import { shallow } from "enzyme";
 import Search from "../../../../src/Components/Search/Search";
-import SearchResults from "../../../../src/Components/SearchResults/SearchResults";
 import axios from "axios";
 
 jest.mock("../../../../src/Config/configurations", () => ({
