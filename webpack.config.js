@@ -63,7 +63,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     port: process.env.PORT || 8080,
-    host: "localhost",
+    host: "*",
     allowedHosts: [".herokuapp.com", "localhost"],
   },
   externals: ["window"],
