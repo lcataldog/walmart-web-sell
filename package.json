@@ -90,11 +90,8 @@
         "start": "webpack-dev-server --config ./webpack.config.js --open --color",
         "start:docker": "webpack-dev-server --host 0.0.0.0 --port 8080 --config ./webpack.config.js --open --color",
         "build": "webpack --config webpack.dist.config.js --progress --color",
-        "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject",
         "docker:build": "docker build -t walmart-web-sell .",
         "docker:run": "npm run docker:build && docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3001:8080 walmart-web-sell",
-        "jest": "cross-env NODE_PATH=./src jest",
         "test:unit": "npm run jest -- test/unit",
         "test:integration": "npm run jest -- test/integration"
     },

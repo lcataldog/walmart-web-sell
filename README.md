@@ -27,37 +27,32 @@ npm test
 
 # Tecnología
 
-* [React](https://facebook.github.io/react): Renderiza componentes en la pantalla
+- [React](https://facebook.github.io/react): Renderiza componentes en la pantalla
 
-* [Webpack](http://webpack.github.io/): La herramienta de build
+- [Webpack](http://webpack.github.io/): La herramienta de build
 
-* [Babel](https://babeljs.io/): Compila JavaScript nuevo y jsx
+- [Babel](https://babeljs.io/): Compila JavaScript nuevo y jsx
 
-* [Jest](https://facebook.github.io/jest/): Corre las pruebas unitarias y de integración.
+- [Jest](https://facebook.github.io/jest/): Corre las pruebas unitarias y de integración.
 
-* [Enzyme](https://github.com/airbnb/enzyme): Para escribir pruebas de componentes React
+- [Enzyme](https://github.com/airbnb/enzyme): Para escribir pruebas de componentes React
 
-* [ESLint](http://eslint.org/): Hace linting con las reglas de Airbnb (https://github.com/airbnb/javascript)
+- [ESLint](http://eslint.org/): Hace linting con las reglas de Airbnb (https://github.com/airbnb/javascript)
 
-* [Docker](https://www.docker.com/): Usado en Jenkins para instalar la aplicación y correr las tareas
+- [Docker](https://www.docker.com/): Usado en Jenkins para instalar la aplicación y correr las tareas
 
 # Tareas del Proyecto
 
 Las tareas que se puede correr en proyecto se encuentran en package.json
 
-* **start**: empeza un servidor webpack local para desarrollo. 
+- **start**: empeza un servidor webpack local para desarrollo.
 
-* **build**: hace un build otimizado con webpack en la carpeta /dist
+- **build**: hace un build otimizado con webpack en la carpeta /dist
 
-* **test:unit**: Ejecuta pruebas unitarias.
+- **test:unit**: Ejecuta pruebas unitarias.
 
-* **test:integration**: Ejecuta pruebas integracion.
+- **test:integration**: Ejecuta pruebas integracion.
 
-* **start:docker**: empeza un servidor webpack local para desarrollo desde un contenedor docker. 
+- **docker:build**: Crea imagen docker del artefacto
 
-* **docker:build**: Crea imagen docker del artefacto
-
-* **docker:run**: Ejecura el contenedor docker, hace referencia a docker:build
-
-
-
+- **docker:run**: Ejecuta el contenedor docker, hace referencia a docker:build, ejecutar local desde docker
